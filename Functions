@@ -1,0 +1,33 @@
+//Normal way
+function doSomething() {
+  ...
+}
+doSomething()
+
+//Function-veriable way
+var doSomething = function() {
+  ...
+}
+doSomething()
+
+//TWO WAY DIFFERENCES
+1.) It doesen't matter whether we use them before or after their declaration in the code.
+
+    sayHello() //prints "Hello!"
+
+    function SayHello() {
+      console.log("Hello!")
+    }
+
+    sayHello() //prints "Hello!"
+    
+2.)We can only use them after they've been declared.
+    sayHello() //undefined
+
+    function SayHello() {
+      console.log("Hello!")
+    }
+
+    sayHello() //prints "Hello!"
+    
+
