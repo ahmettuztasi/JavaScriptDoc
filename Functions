@@ -1,16 +1,4 @@
-//Normal way
-function doSomething() {
-  ...
-}
-doSomething()
-
-//Function-veriable way
-var doSomething = function() {
-  ...
-}
-doSomething()
-
-//TWO WAY DIFFERENCES
+//TWO WAY DIFFERENCES DEFINING FUNCTION
 1.) It doesen't matter whether we use them before or after their declaration in the code.
 
     sayHello() //prints "Hello!"
@@ -24,10 +12,22 @@ doSomething()
 2.)We can only use them after they've been declared.
     sayHello() //undefined
 
-    function SayHello() {
+    const sayHello = function() {
       console.log("Hello!")
     }
 
     sayHello() //prints "Hello!"
-    
 
+//PASSING FUNCTION AND CONDITION AS ARGUEMENTS
+
+    function doIf(condition, func) {
+      if(condition) {
+        func()
+      }
+    }
+    
+    doIf(x==1, sayHello)
+    
+    function sayHello() {
+      console.log("Hello!")
+    }
